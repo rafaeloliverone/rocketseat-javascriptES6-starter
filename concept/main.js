@@ -105,3 +105,29 @@ const test2 = () => 'teste';
 
 console.log(test());
 
+
+// DISRUPTION
+const username = {
+    name: 'Rafael',
+    year: 20,
+    address: {
+        street: 'Walfredo Macedo',
+        neightboard: 'Quarenta',
+        number: 564
+    }
+};
+
+// const name1 = username.name;
+// const year1 = username.year
+// const street1 = username.address.street;
+
+const { name, year, address: { street, number } } = username;
+console.log(`${street} - ${number}`);
+
+
+function showUsername({ name, year, address: {neightboard} }) {
+    return `${name} - ${neightboard}`;
+}
+
+console.log(showUsername(username));
+
