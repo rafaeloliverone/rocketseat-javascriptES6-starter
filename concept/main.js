@@ -131,3 +131,55 @@ function showUsername({ name, year, address: {neightboard} }) {
 
 console.log(showUsername(username));
 
+
+// REST OPERATOR 
+const company2 = {
+    company: 'Google',
+    description: 'Good company',
+    skills: 'Web'
+};
+
+const { company, ...rest } = company2;
+console.log(rest); 
+
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [a, b , ...c] = numbers ;
+
+function sumMoreOne(...params) {
+    return params.map( (number) => number + 1 );
+}
+
+console.log(sumMoreOne(1, 2, 3, 4));
+
+
+// SPREAD OPERATOR
+const array1  = [1, 2, 4];
+const array2 = [5, 6, 8];
+
+const array3 = [ ...array1, ...array2 ];
+console.log(array3);
+
+
+const company3 = {
+    nameCompany: 'Google',
+    description1: 'Good company',
+    skills1: 'Web'
+};
+
+const copyCompany = { ...company3, skills1: 'Design' };
+console.log(copyCompany);
+
+
+// OBJECT SHORT SYNTAX
+const nameGuest = 'Rafael';
+const yearGuest =  20;
+
+const guest = {
+    nameGuest,
+    yearGuest,
+    code: '1404'
+}
+
+console.log(guest);
