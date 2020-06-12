@@ -83,3 +83,25 @@ const soma2 = (a = 2, b = 5) => a + b;
 console.log(soma(1));
 console.log(soma());
 
+
+// ARROW FUNCTIONS 
+const pair = [2, 4, 6, 8, 10];
+
+const squadPair = pair.map((item) => {
+    return item**2;
+});
+
+// another way
+const squadPair2 = pair.map((item) => item**2 );
+
+console.log(squadPair);
+
+
+const test = () => {
+    return 'teste';
+}
+
+const test2 = () => 'teste';
+
+console.log(test());
+
