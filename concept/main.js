@@ -71,3 +71,15 @@ const find = array.find(function(item) {
 })
 console.log(find);
 
+
+// VALUES DEFAULTS
+const soma = function(a = 2, b = 5) {
+    return a + b;
+}
+
+// with arrow function
+const soma2 = (a = 2, b = 5) => a + b;
+
+console.log(soma(1));
+console.log(soma());
+
