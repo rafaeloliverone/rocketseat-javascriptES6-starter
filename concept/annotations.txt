@@ -1,0 +1,19 @@
+yarn init - gerar o package.json
+
+yarn add @babel/cli
+
+yarn add @babel/preset-env
+
+configurar babel
+.babelrc 
+
+babel é responsável por compilar as novas funcionalidades para o navegador, para que todos entendam.
+
+preset-env entender qual ambiente está trabalhando, no caso aqui é: navegador. Vai converter as features do ES6,7,8 para os browsers.
+
+criar "scripts" no package.json para o babel monitorar o main.js
+
+bundle.js gera o código para os navegadores caso não suportem as features
+
+operators rest e spread, precisa adicionar 
+yarn add @babel/plugin-proposal-object-rest-spread
