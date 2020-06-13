@@ -43,11 +43,6 @@ console.log(listUsers.filter( (user) => {
 
 console.log(listUsers.find( user => user.company == 'Google' ));
 
-// console.log(listUsers.map( user => {
-//     if (user.year * 2 <= 50){
-//         return user;
-//     } 
-// }));
 
 var yearDuplicate = listUsers
     .map( user => {
@@ -59,3 +54,34 @@ var yearDuplicate = listUsers
     );
 
 console.log(yearDuplicate);
+
+// QUESTION 3
+
+const user4 = { name: 'Diego', year: 23 };
+const showNameUser = (user) => user.name ;
+
+console.log(showNameUser(user4));
+
+var nameUser = 'Rafael';
+var yearUser = 20; 
+
+const formatUser = (name, year) => `${name} - ${year}`;
+
+console.log(formatUser(nameUser, yearUser));
+
+
+const promise = function() {
+    return new Promise(function(resolve, reject) {
+    return resolve();
+    })
+}
+
+const promiseArrow = () => {
+    return new Promise(function(resolve, reject) {
+        return resolve();
+    })
+}
+
+console.log(promiseArrow());
+
+// QUESTION 4 
