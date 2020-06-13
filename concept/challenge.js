@@ -114,3 +114,28 @@ console.log(showUserRafael(userRafael));
 
 
 // QUESTION 5 
+const arr = [1, 2, 3, 4, 5];
+
+var [a, ...b] = arr ;
+
+console.log(a,b)
+
+var sumAllNumbers = (...args) => {
+    var resultSum = 0;
+    args.map( (number) => resultSum += number )
+    return resultSum;
+}; 
+
+console.log(sumAllNumbers(1,2,3,4,5,6));
+
+
+const medicine = {
+    name: 'Dipirona',
+    company : {
+        name: 'RedePharma',
+        foundation: 1990
+    }
+}
+
+const copyMedicine = { ...medicine, name: 'Vermicida' };
+console.log(copyMedicine);
