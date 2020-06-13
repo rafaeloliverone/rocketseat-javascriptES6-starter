@@ -55,8 +55,8 @@ var yearDuplicate = listUsers
 
 console.log(yearDuplicate);
 
-// QUESTION 3
 
+// QUESTION 3
 const user4 = { name: 'Diego', year: 23 };
 const showNameUser = (user) => user.name ;
 
@@ -84,4 +84,33 @@ const promiseArrow = () => {
 
 console.log(promiseArrow());
 
+
 // QUESTION 4 
+const companyRocket = {
+    name: 'Rocketseat',
+    address: {
+        city: 'Rio do Sul',
+        state: 'SC',
+    }
+};
+
+var {name, address: { city, state } } = companyRocket;
+console.log(name, city, state)
+
+const userRafael = {
+    name: 'Rafael',
+    address: {
+        city: 'Rio do Sul',
+        state: 'SC'
+    }
+};
+
+const showUserRafael = user => { 
+    var { name, address: { city } } = user;
+    return `Name: ${name} - City: ${city}`;
+}
+
+console.log(showUserRafael(userRafael));
+
+
+// QUESTION 5 
