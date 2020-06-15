@@ -5,11 +5,62 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        li {
+            clear: both;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 80px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        strong {
+            font-size: 20px;
+        } 
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>ES6</h1>
-    
-    <input type="text" id="app">
+    <form id="repo-form">
+        <input type="text" name="repository" />
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="repo-list">
+        <li>
+            <img src="https://avatars2.githubusercontent.com/u/48067346?v=4" alt="Profile photo" />
+            <strong>rocketseat.com.br</strong>
+            <p>Tire a  sua ideia do papel e dê vida.</p>
+            <a href="https://github.com/rafaeloliverone">Github</a>
+        </li>
+        <li>
+            <img src="https://avatars2.githubusercontent.com/u/48067346?v=4" alt="Profile photo" />
+            <strong>rocketseat.com.br</strong>
+            <p>Tire a  sua ideia do papel e dê vida.</p>
+            <a href="https://github.com/rafaeloliverone">Github</a>
+        </li>
+    </ul>
+
     <script src="./bundle.js"></script>
 </body>
 </html>
