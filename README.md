@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  JS Rocketseat :book:
+  JS ES6 Rocketseat :book:
 </h3>
 
 <p align="center"> 
