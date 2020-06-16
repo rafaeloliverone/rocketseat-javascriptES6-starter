@@ -1,4 +1,5 @@
 import axios from 'axios';
+import api from './api';
 
 const myPromise = () => new Promise((resolve, reject) => {
     setTimeout(() => { resolve('OK') }, 2000);
@@ -35,6 +36,7 @@ class App {
 
         this.formEl = document.getElementById('repo-form');
         this.listEl = document.getElementById('repo-list');
+        this.inputEl = document.querySelector('input[name=repository]');
 
         this.registerHandlers();
 
@@ -44,17 +46,50 @@ class App {
         this.formEl.onsubmit = event => this.addRepository(event);
     }
 
-    addRepository(event) {
+    setLoading(loading = true){
+        if (loading == true) {
+            let loadEl = document.createElement('span');
+            loadEl.appendChild(document.createTextNode('Loading'));
+            loadEl.setAttribute('id', 'loading');
+
+            this.formEl.appendChild(loadEl);
+        } else {
+            document.getElementById('loading').remove();
+        }
+    }
+
+    async addRepository(event) {
         event.preventDefault();
 
-        this.repositories.push({
-            name: 'rocketseat',
-            description: 'Tire a  sua ideia do papel e dê vida.',
-            avatar_url: 'https://avatars2.githubusercontent.com/u/48067346?v=4',
-            html_url: 'https://github.com/rafaeloliverone'
-        });
+        const repoInput = this.inputEl.value;
+        
+        if (repoInput.length === 0) {
+            return;
+        }
 
-        this.render();
+        this.setLoading();
+        
+        try {
+            const response = await api.get(`${repoInput}`);
+
+            const { name, description, html_url, owner: {avatar_url} } = response.data
+
+            this.repositories.push({
+                name,
+                description,
+                avatar_url,
+                html_url, 
+            });
+
+            this.inputEl.value = '';
+
+            this.render();
+        } catch (error) {
+            alert('Repository not found');
+        }
+
+        this.setLoading(false);
+        
         // console.log(this.repositories);
     }
 
