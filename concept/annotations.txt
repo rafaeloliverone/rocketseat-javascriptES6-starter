@@ -17,3 +17,20 @@ bundle.js gera o código para os navegadores caso não suportem as features
 
 operators rest e spread, precisa adicionar 
 yarn add @babel/plugin-proposal-object-rest-spread
+
+// webpack
+
+yarn add webpack webpack-cli -D - adicionado webpack as dependências de desenvolvimento
+
+configurar o webpack.config.js
+
+add babel-loader
+
+yarn add babel-loader
+
+yarn add webpack-dev-server -D
+
+
+yarn add @babel/plugin-transform-async-to-generator -D
+yarn add @babel/polyfill -D
+yarn add axios
